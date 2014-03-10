@@ -1,0 +1,10 @@
+---
+tanks: [ al80, al80 ]
+ceiling   : 0
+m-gf-low  : 1.0
+m-gf-high : 1.0
+m-value   : 1.0
+dives:
+- name : 60' NAUI NDL test
+  plan : 
+  - [ 60, 55 ]
