@@ -1,0 +1,17 @@
+file formats:
+
+word.txt - one word per line
+
+words.dmp - binary { 
+u64_t node_count
+u64_t edge_count
+struct nodes{ 
+	char value:4
+	bool eof:1
+	u64_t edge_start # index into edge array
+}	[ node_count ]
+struct edges{
+	char target:4 # 0 delimiated
+	u64_t node # index into node
+}	[ edge_count ]
+
