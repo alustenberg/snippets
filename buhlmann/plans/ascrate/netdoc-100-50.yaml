@@ -1,0 +1,11 @@
+---
+ceiling   : 0
+m-gf-low  : 1.0
+m-gf-high : 1.0
+m-value   : 1.0
+tanks: [ lp108, lp108 ]
+dives:
+- name : 100' bounce
+  plan : 
+  - [ 100, 25 ]
+  - [ 50, 2   ]

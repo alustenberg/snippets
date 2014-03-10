@@ -1,0 +1,22 @@
+---
+tanks: [ al80 ]
+dives:
+- name : 60'
+  plan : 
+  - [ 60, 35 ]
+- name : 120 min si
+  plan : 
+  - [ 0, 120 ]
+- name : 60'
+  plan : 
+  - [ 60, 35 ]
+- name : 120 min si
+  plan : 
+  - [ 0, 120 ]
+- name : 60'
+  plan : 
+  - [ 60, 35 ]
+- name : 120 min si
+  plan : 
+  - [ 0, 120 ]
+

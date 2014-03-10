@@ -1,0 +1,5 @@
+---
+capacity: 120
+rate: 3440
+fill: 3440
+reserve: 500

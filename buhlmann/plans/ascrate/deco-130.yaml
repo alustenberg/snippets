@@ -1,0 +1,10 @@
+---
+tanks : [ al80, al80, al80 ]
+ceiling: 0
+m-value: 1.0
+m-gf-low: .3
+m-gf-high: .8
+dives:
+- name : deco dive to 130'
+  plan : 
+  - [ 130, 30 ]

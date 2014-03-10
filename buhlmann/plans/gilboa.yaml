@@ -1,0 +1,36 @@
+---
+dives:
+- name: 'platform, bus, tower, tubes, and back'
+  plan: 
+  - [ 20, 5  ] # platform
+  - [ 35, 10 ] # bus
+  - [ 45, 5  ] # tower
+  - [ 60, 5  ] # tubes
+  - [ 45, 5  ] # tower
+  - [ 35, 5  ] # bus
+  - [ 20, 5  ] # platform
+- name: 'si'
+  plan: 
+  - [ 0, 120 ]
+
+- name: 'skills and explore'
+  plan:
+  - [ 20, 10 ]
+  - [ 35, 30 ]
+  - [ 20, 10 ]
+
+- name: 'si'
+  plan: 
+  - [ 0, 120 ]
+
+- name: 'skills and explore'
+  plan:
+  - [ 20, 10 ]
+  - [ 35, 30 ]
+  - [ 20, 10 ]
+
+- name: 'si'
+  plan: 
+  - [ 0, 120 ]
+
+

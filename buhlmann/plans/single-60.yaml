@@ -1,0 +1,6 @@
+---
+tanks: [ al80 ]
+dives:
+- name : 60'
+  plan : 
+  - [ 60, 35 ]

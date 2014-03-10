@@ -1,0 +1,6 @@
+---
+tanks : [ al80 ]
+dives:
+- name : great blue hole
+  plan : 
+  - [ 130, 10 ]

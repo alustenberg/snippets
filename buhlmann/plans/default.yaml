@@ -1,0 +1,14 @@
+---
+units   : 'imperial'
+tanks   : [ al80 ]
+rmv     : .5
+stoptime: 5
+table   : 'zh-l16c'
+
+ceiling   : .8
+m-gf-low  : .30
+m-gf-high : .80
+m-value   : .95
+dives: 
+ plan:
+ - [ 0, 0 ]
