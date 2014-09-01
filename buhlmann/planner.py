@@ -21,7 +21,7 @@ class zh:
 		self.tissues = {}
 
 		tab = csv.reader( open("tables/{0}.tsv".format(model)), dialect = 'excel-tab' )
-		if( debug >= 1 ):
+		if( debug >= 2 ):
 			print "ht	m0	dm	a	b"
 		for row in tab:
 			try:
@@ -35,7 +35,7 @@ class zh:
 				self.a[ht]  = m0 - dm * 1 
 				self.b[ht]  = 1 / dm 
 
-				if( debug >= 1 ):
+				if( debug >= 2 ):
 					print "{:5.1f}\t{:.2f}\t{:.2f}\t{:.2f}\t{:.2f}".format(
 						ht, self.m0[ht], self.dm[ht], self.a[ht], self.b[ht]
 					)
@@ -233,10 +233,11 @@ class dive:
 		for [ s_ata, e_ata, time] in stops:
 			if s_ata == e_ata == ( ( 15.0 / 33.0 ) + 1 ) :
 				continue
-			#print "stop: {:.5f} ~ {:.5f} for {:1f}".format(
-			#	s_ata,
-			#	e_ata,
-			#	time)
+			if debug > 3:
+				print "stop: {:.5f} ~ {:.5f} for {:1f}".format(
+					s_ata,
+					e_ata,
+					time)
 			factor += ( ( s_ata + e_ata ) / 2.0 ) * time
 		return factor
 	
@@ -407,6 +408,12 @@ class dive:
 				gas_in = gas_consumed
 				if avg_depth_ata > 1.0:
 					gas_consumed += avg_depth_ata * self.rmv * c_time
+					if debug > 1:
+						print "gas consumed: {:.2f}\t{:.2f}\t{:d}\t{:.5f}".format(
+							avg_depth_ata,
+							self.rmv,
+							c_time,
+							gas_consumed )
 		
 				if not quiet:
 					k = sorted( l_tap, key = l_tap.get, reverse = True )[0]
@@ -430,6 +437,9 @@ class dive:
 		for [ s_depth_ata, e_depth_ata, c_time ] in stops:
 			if c_time == 0:
 				continue	
+			
+			avg_depth_ata = ( s_depth_ata + e_depth_ata ) / 2.0
+			
 			state = 'stop'
 			if c_time:
 				delta_ata = ( e_depth_ata - s_depth_ata ) / c_time
@@ -445,6 +455,12 @@ class dive:
 
 			gas_in = gas_consumed
 			gas_consumed += avg_depth_ata * self.rmv * c_time
+			if debug > 1:
+				print "gas consumed: {:.2f}\t{:.2f}\t{:d}\t{:.5f}".format(
+					avg_depth_ata,
+					self.rmv,
+					c_time,
+					gas_consumed )
 			
 			if not quiet:
 				k = sorted( l_tap, key = l_tap.get, reverse = True )[0]
