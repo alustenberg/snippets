@@ -1,26 +1,25 @@
 package main
 
 import (
-	"fmt"
 	"flag"
+	"fmt"
+	"gopkg.in/gographics/imagick.v2/imagick"
 	"io/ioutil"
 	"log"
 	"os"
 	"os/signal"
-	"sync"
 	"path/filepath"
 	"strings"
-	"gopkg.in/gographics/imagick.v2/imagick"
-
+	"sync"
 )
+
 var suffixes = map[string]bool{
 	".jpg": true,
 	".gif": true,
 	".png": true,
 }
 
-var sizes = []uint{ 3840, 1920, 800 }
-
+var sizes = []uint{3840, 1920, 800}
 
 var logger *log.Logger
 
@@ -62,8 +61,8 @@ func walkFiles(root string, recurse uint8, paths chan *result, done <-chan struc
 	for _, file := range files {
 		if file.Mode().IsDir() {
 			// skip resize directories
-			if strings.HasPrefix(file.Name(), "resize_") == false{
-				subDirs = append(subDirs,file.Name())
+			if strings.HasPrefix(file.Name(), "resize_") == false {
+				subDirs = append(subDirs, file.Name())
 			}
 			continue
 		}
@@ -86,10 +85,10 @@ func walkFiles(root string, recurse uint8, paths chan *result, done <-chan struc
 	if recurse > 0 {
 		for _, subDir := range subDirs {
 			select {
-			case <- done:
+			case <-done:
 				break
 			default:
-				walkFiles(root+"/"+ subDir, recurse+1, paths, done)
+				walkFiles(root+"/"+subDir, recurse+1, paths, done)
 			}
 		}
 	}
@@ -111,7 +110,7 @@ func resizeImage(entry *result) bool {
 
 	// check for the output dir
 	if _, statErr := os.Stat(outputDir); statErr != nil {
-		if os.IsNotExist(statErr){
+		if os.IsNotExist(statErr) {
 			os.Mkdir(outputDir, 0775)
 		} else {
 			panic("expected resize dir is not a dir")
@@ -121,7 +120,7 @@ func resizeImage(entry *result) bool {
 	// check to see if there an output file already
 	if _, statErr := os.Stat(outputFile); statErr == nil {
 		// TODO: check mtimes
-		return true;
+		return true
 	}
 
 	wand := imagick.NewMagickWand()
@@ -157,7 +156,7 @@ func resizeImage(entry *result) bool {
 		panic(err)
 	}
 
-	if err := wand.WriteImage( outputFile ); err != nil {
+	if err := wand.WriteImage(outputFile); err != nil {
 		panic(err)
 	}
 
@@ -169,7 +168,7 @@ func runWorkers(workerCount int, paths <-chan *result, results chan *result, don
 	wg.Add(workerCount)
 	for i := 1; i <= workerCount; i++ {
 		go func(i int) {
-			logger.Println("starting worker",i)
+			logger.Println("starting worker", i)
 			defer wg.Done()
 
 			for entry := range paths {
@@ -189,8 +188,10 @@ func runWorkers(workerCount int, paths <-chan *result, results chan *result, don
 	}()
 }
 
-func min( x, y int) int {
-	if x < y { return x }
+func min(x, y int) int {
+	if x < y {
+		return x
+	}
 	return y
 }
 
@@ -198,7 +199,6 @@ func main() {
 	// initalize imagemagick
 	imagick.Initialize()
 	defer imagick.Terminate()
-
 
 	recurseFlag := flag.Bool("recurse", false, "recurse subdirs")
 
