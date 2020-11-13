@@ -1,0 +1,10 @@
+this script is used to monitor and datalog the charge/discharge cycle of battery packs.
+
+specificly the 40v 34 cell NiMH packs used by cuda 400 DPVs.
+
+discharge montioring is done via voltage, to the defined cutoff (typically 35v)
+
+charge monitoring is done via amperage to caculate MAh SOC
+
+protocol is for https://www.amazon.com/gp/product/B010HDFFQ8
+
