@@ -1,0 +1,147 @@
+---
+dives:
+# day 1
+- name: "day 1 - midnight - 10am si"
+  plan:
+  - [ 0, 600 ]
+- name: "day 1 - 10am 30min 60'"
+  plan: 
+  - [ 60, 30 ]
+- name: "day 1 - 10:30am - 1pm si"
+  plan: 
+  - [ 0, 150 ]
+- name: "day 1 - 1pm 30min 60'"
+  plan:
+  - [ 60, 30 ]
+- name: "day 1 - 1:30pm - 3pm si"
+  plan:
+  - [ 0, 90 ]
+- name: "day 1 - 3pm 60min 30'"
+  plan:
+  - [ 30, 60 ]
+- name: "day 1 - 4pm - 7pm si"
+  plan:
+  - [ 0, 180 ]
+- name: "day 1 - 7pm night dive, 30' 60min"
+  plan:
+  - [ 30, 60 ]
+- name: "day 1 - 8pm - minght si"
+  plan:
+  - [ 0, 240 ]
+
+# day 2
+- name: "day 2 - midnight - 10am si"
+  plan:
+  - [ 0, 600 ]
+- name: "day 2 - 10am 30min 60'"
+  plan: 
+  - [ 60, 30 ]
+- name: "day 2 - 10:30am - 1pm si"
+  plan: 
+  - [ 0, 150 ]
+- name: "day 2 - 1pm 30min 60'"
+  plan:
+  - [ 60, 30 ]
+- name: "day 2 - 1:30pm - 3pm si"
+  plan:
+  - [ 0, 90 ]
+- name: "day 2 - 3pm 60min 30'"
+  plan:
+  - [ 30, 60 ]
+- name: "day 2 - 4pm - 7pm si"
+  plan:
+  - [ 0, 180 ]
+- name: "day 2 - 7pm night dive, 30' 60min"
+  plan:
+  - [ 30, 60 ]
+- name: "day 2 - 8pm - minght si"
+  plan:
+  - [ 0, 240 ]
+
+# day 3
+- name: "day 3 - midnight - 10am si"
+  plan:
+  - [ 0, 600 ]
+- name: "day 3 - 10am 30min 60'"
+  plan: 
+  - [ 60, 30 ]
+- name: "day 3 - 10:30am - 1pm si"
+  plan: 
+  - [ 0, 150 ]
+- name: "day 3 - 1pm 30min 60'"
+  plan:
+  - [ 60, 30 ]
+- name: "day 3 - 1:30pm - 3pm si"
+  plan:
+  - [ 0, 90 ]
+- name: "day 3 - 3pm 60min 30'"
+  plan:
+  - [ 30, 60 ]
+- name: "day 3 - 4pm - 7pm si"
+  plan:
+  - [ 0, 180 ]
+- name: "day 3 - 7pm night dive, 30' 60min"
+  plan:
+  - [ 30, 60 ]
+- name: "day 3 - 8pm - minght si"
+  plan:
+  - [ 0, 240 ]
+
+# day 4
+- name: "day 4 - midnight - 10am si"
+  plan:
+  - [ 0, 600 ]
+- name: "day 4 - 10am 30min 60'"
+  plan: 
+  - [ 60, 30 ]
+- name: "day 4 - 10:30am - 1pm si"
+  plan: 
+  - [ 0, 150 ]
+- name: "day 4 - 1pm 30min 60'"
+  plan:
+  - [ 60, 30 ]
+- name: "day 4 - 1:30pm - 3pm si"
+  plan:
+  - [ 0, 90 ]
+- name: "day 4 - 3pm 60min 30'"
+  plan:
+  - [ 30, 60 ]
+- name: "day 4 - 4pm - 7pm si"
+  plan:
+  - [ 0, 180 ]
+- name: "day 4 - 7pm night dive, 30' 60min"
+  plan:
+  - [ 30, 60 ]
+- name: "day 4 - 8pm - minght si"
+  plan:
+  - [ 0, 240 ]
+
+# day 
+- name: "day 5 - midnight - 10am si"
+  plan:
+  - [ 0, 600 ]
+- name: "day 5 - 10am 30min 60'"
+  plan: 
+  - [ 60, 30 ]
+- name: "day 5 - 10:30am - 1pm si"
+  plan: 
+  - [ 0, 150 ]
+- name: "day 5 - 1pm 30min 60'"
+  plan:
+  - [ 60, 30 ]
+- name: "day 5 - 1:30pm - 3pm si"
+  plan:
+  - [ 0, 90 ]
+- name: "day 5 - 3pm 60min 30'"
+  plan:
+  - [ 30, 60 ]
+- name: "day 5 - 4pm - 7pm si"
+  plan:
+  - [ 0, 180 ]
+- name: "day 5 - 7pm night dive, 30' 60min"
+  plan:
+  - [ 30, 60 ]
+- name: "day 5 - 8pm - minght si"
+  plan:
+  - [ 0, 240 ]
+

@@ -1,0 +1,23 @@
+---
+tanks: [ al80 ]
+dives:
+- name : :depth:' 1
+  plan : 
+  - [ :depth:, :time: ]
+- name : si 1
+  plan :
+  - [ 0, :si: ]
+- name : :depth: 2 
+  plan : 
+  - [ :depth:, :time: ]
+- name : si 2
+  plan :
+  - [ 0, :si: ]
+- name : :depth: 3 
+  plan : 
+  - [ :depth:, :time: ]
+- name : si 3
+  plan :
+  - [ 0, :si: ]
+
+
